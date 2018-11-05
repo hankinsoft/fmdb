@@ -230,6 +230,11 @@
     return -1;
 }
 
+- (int)columnTypeForIndex:(int)columnIdx {
+    int columnType = sqlite3_column_type([_statement statement], columnIdx);
+    return columnType;
+}
+
 - (int)intForColumn:(NSString*)columnName {
     return [self intForColumnIndex:[self columnIndexForName:columnName]];
 }

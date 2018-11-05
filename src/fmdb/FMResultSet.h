@@ -122,6 +122,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (int)columnIndexForName:(NSString*)columnName;
 
+/** Column type for specifid column index
+ 
+ @param columnIdx Zero-based index for column.
+ 
+ @return integer representation of column type
+ */
+- (int)columnTypeForIndex:(int)columnIdx;
+
 /** Column name for column index
 
  @param columnIdx Zero-based index for column.
