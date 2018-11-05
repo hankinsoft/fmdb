@@ -395,7 +395,8 @@
         returnValue = [NSNumber numberWithLongLong:[self longLongIntForColumnIndex:columnIdx]];
     }
     else if (columnType == SQLITE_FLOAT) {
-        returnValue = [NSNumber numberWithDouble:[self doubleForColumnIndex:columnIdx]];
+        NSString * temp = [self stringForColumnIndex: columnIdx];
+        returnValue = [NSDecimalNumber decimalNumberWithString: temp];
     }
     else if (columnType == SQLITE_BLOB) {
         returnValue = [self dataForColumnIndex:columnIdx];
