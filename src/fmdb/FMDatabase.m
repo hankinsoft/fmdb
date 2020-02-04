@@ -266,6 +266,14 @@ NS_ASSUME_NONNULL_END
     return YES;
 }
 
+- (int) createModule: (NSString*) moduleName
+              module: (void*) module
+          clientData: (void*) pClientData
+             destroy: (void*) xDestroy
+{
+    return sqlite3_create_module( _db, moduleName.UTF8String, module, NULL );
+} // End of createModule:
+
 #pragma mark Busy handler routines
 
 // NOTE: appledoc seems to choke on this function for some reason;
