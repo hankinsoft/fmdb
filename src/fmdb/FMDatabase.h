@@ -303,8 +303,8 @@ typedef NS_ENUM(int, FMDBCheckpointMode) {
 
 - (int) createModule: (NSString*) moduleName
               module: (void*) module
-          clientData: (void*) pClientData
-             destroy: (void*) xDestroy;
+          clientData: (void* _Nullable) pClientData
+             destroy: (void* _Nullable) xDestroy;
 
 /** Test to see if we have a good connection to the database.
  
