@@ -41,6 +41,18 @@
 		621721B51892BFE30006691F /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CC50F2CB0DF9183600E4AAAE /* FMDatabaseAdditions.m */; };
 		621721B61892BFE30006691F /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9E4EB813B31188005F9210 /* FMDatabasePool.m */; };
 		6290CBB7188FE836009790F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6290CBB6188FE836009790F8 /* Foundation.framework */; };
+		72F3865F2447694C001F126B /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 72F3865B2447694B001F126B /* sqlite3.c */; };
+		72F386602447694C001F126B /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 72F3865B2447694B001F126B /* sqlite3.c */; };
+		72F386612447694C001F126B /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 72F3865B2447694B001F126B /* sqlite3.c */; };
+		72F386622447694C001F126B /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 72F3865B2447694B001F126B /* sqlite3.c */; };
+		72F386672447694C001F126B /* sqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F3865D2447694B001F126B /* sqlite3.h */; };
+		72F386682447694C001F126B /* sqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F3865D2447694B001F126B /* sqlite3.h */; };
+		72F386692447694C001F126B /* sqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F3865D2447694B001F126B /* sqlite3.h */; };
+		72F3866A2447694C001F126B /* sqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F3865D2447694B001F126B /* sqlite3.h */; };
+		72F3866B2447694C001F126B /* sqlite3ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F3865E2447694B001F126B /* sqlite3ext.h */; };
+		72F3866C2447694C001F126B /* sqlite3ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F3865E2447694B001F126B /* sqlite3ext.h */; };
+		72F3866D2447694C001F126B /* sqlite3ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F3865E2447694B001F126B /* sqlite3ext.h */; };
+		72F3866E2447694C001F126B /* sqlite3ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F3865E2447694B001F126B /* sqlite3ext.h */; };
 		8314AF3318CD73D600EC0E25 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 8314AF3218CD73D600EC0E25 /* FMDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83C73F131C326B9400FFC730 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC24EBB0A13E34D00A6D3E3 /* FMDatabase.m */; };
 		83C73F141C326B9400FFC730 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC24EC00A13E34D00A6D3E3 /* FMResultSet.m */; };
@@ -147,6 +159,9 @@
 		6290CBB5188FE836009790F8 /* libFMDB-IOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libFMDB-IOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6290CBB6188FE836009790F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6290CBC6188FE837009790F8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		72F3865B2447694B001F126B /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
+		72F3865D2447694B001F126B /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
+		72F3865E2447694B001F126B /* sqlite3ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3ext.h; sourceTree = "<group>"; };
 		8314AF3218CD73D600EC0E25 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
 		831DE6FD175B7C9C001F7317 /* README.markdown */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 		83C73EFE1C326AB000FFC730 /* FMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -264,6 +279,7 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				72F3865A2447694B001F126B /* sqlite */,
 				8314AF3018CD737D00EC0E25 /* fmdb */,
 				CC7CE42518F5C02E00938264 /* optional extras */,
 				8314AF3118CD739500EC0E25 /* sample */,
@@ -332,6 +348,17 @@
 				CCA66A2C19C0CB1900EFDAC1 /* fts3_tokenizer.h */,
 			);
 			name = fts3;
+			sourceTree = "<group>";
+		};
+		72F3865A2447694B001F126B /* sqlite */ = {
+			isa = PBXGroup;
+			children = (
+				72F3865B2447694B001F126B /* sqlite3.c */,
+				72F3865D2447694B001F126B /* sqlite3.h */,
+				72F3865E2447694B001F126B /* sqlite3ext.h */,
+			);
+			name = sqlite;
+			path = src/sqlite;
 			sourceTree = "<group>";
 		};
 		8314AF3018CD737D00EC0E25 /* fmdb */ = {
@@ -411,7 +438,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F3866E2447694C001F126B /* sqlite3ext.h in Headers */,
 				2CD242631FCC09CA00479FDE /* FMDB.h in Headers */,
+				72F3866A2447694C001F126B /* sqlite3.h in Headers */,
 				2CD242641FCC09CA00479FDE /* FMDatabase.h in Headers */,
 				2CD242651FCC09CA00479FDE /* FMResultSet.h in Headers */,
 				2CD242661FCC09CA00479FDE /* FMDatabaseQueue.h in Headers */,
@@ -424,7 +453,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F3866B2447694C001F126B /* sqlite3ext.h in Headers */,
 				40A146001BE575D000E5D35E /* FMDatabase.h in Headers */,
+				72F386672447694C001F126B /* sqlite3.h in Headers */,
 				40A146011BE575D600E5D35E /* FMResultSet.h in Headers */,
 				40A146041BE575EB00E5D35E /* FMDatabasePool.h in Headers */,
 				40A146051BE6999800E5D35E /* FMDB.h in Headers */,
@@ -437,7 +468,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F3866C2447694C001F126B /* sqlite3ext.h in Headers */,
 				83C73F181C326BAB00FFC730 /* FMDB.h in Headers */,
+				72F386682447694C001F126B /* sqlite3.h in Headers */,
 				83C73F191C326BAB00FFC730 /* FMDatabase.h in Headers */,
 				83C73F1A1C326BAB00FFC730 /* FMResultSet.h in Headers */,
 				83C73F1B1C326BAB00FFC730 /* FMDatabaseQueue.h in Headers */,
@@ -450,7 +483,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F3866D2447694C001F126B /* sqlite3ext.h in Headers */,
 				83C73F231C326BD600FFC730 /* FMDB.h in Headers */,
+				72F386692447694C001F126B /* sqlite3.h in Headers */,
 				83C73F241C326BD600FFC730 /* FMDatabase.h in Headers */,
 				83C73F251C326BD600FFC730 /* FMResultSet.h in Headers */,
 				83C73F261C326BD600FFC730 /* FMDatabaseQueue.h in Headers */,
@@ -684,6 +719,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CD2425B1FCC09CA00479FDE /* FMDatabase.m in Sources */,
+				72F386622447694C001F126B /* sqlite3.c in Sources */,
 				2CD2425C1FCC09CA00479FDE /* FMResultSet.m in Sources */,
 				2CD2425D1FCC09CA00479FDE /* FMDatabaseQueue.m in Sources */,
 				2CD2425E1FCC09CA00479FDE /* FMDatabaseAdditions.m in Sources */,
@@ -696,6 +732,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				621721B31892BFE30006691F /* FMResultSet.m in Sources */,
+				72F3865F2447694C001F126B /* sqlite3.c in Sources */,
 				621721B21892BFE30006691F /* FMDatabase.m in Sources */,
 				621721B61892BFE30006691F /* FMDatabasePool.m in Sources */,
 				621721B41892BFE30006691F /* FMDatabaseQueue.m in Sources */,
@@ -708,6 +745,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83C73F131C326B9400FFC730 /* FMDatabase.m in Sources */,
+				72F386602447694C001F126B /* sqlite3.c in Sources */,
 				83C73F141C326B9400FFC730 /* FMResultSet.m in Sources */,
 				83C73F151C326B9400FFC730 /* FMDatabaseQueue.m in Sources */,
 				83C73F161C326B9400FFC730 /* FMDatabaseAdditions.m in Sources */,
@@ -720,6 +758,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83C73F1E1C326BC100FFC730 /* FMDatabase.m in Sources */,
+				72F386612447694C001F126B /* sqlite3.c in Sources */,
 				83C73F1F1C326BC100FFC730 /* FMResultSet.m in Sources */,
 				83C73F201C326BC100FFC730 /* FMDatabaseQueue.m in Sources */,
 				83C73F211C326BC100FFC730 /* FMDatabaseAdditions.m in Sources */,
@@ -810,7 +849,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = src/sample/fmdb_Prefix.pch;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_SHADOW = YES;
 				INSTALL_PATH = "$(HOME)/bin";
 				LIBRARY_SEARCH_PATHS = "$(LIBRARY_SEARCH_PATHS)";
@@ -831,7 +870,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = src/sample/fmdb_Prefix.pch;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_SHADOW = YES;
 				INSTALL_PATH = "$(HOME)/bin";
 				LIBRARY_SEARCH_PATHS = "$(LIBRARY_SEARCH_PATHS)";
@@ -941,7 +980,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = src/fmdb/Info.plist;
@@ -981,7 +1020,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
@@ -1022,7 +1061,7 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
@@ -1049,7 +1088,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1089,7 +1128,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = src/fmdb/Info.plist;
@@ -1129,7 +1168,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
@@ -1178,7 +1217,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = src/fmdb/Info.plist;
@@ -1218,7 +1257,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
@@ -1264,7 +1303,7 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_PEDANTIC = NO;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1304,7 +1343,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1329,7 +1368,7 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = FMDB;
 				PUBLIC_HEADERS_FOLDER_PATH = include/FMDB;
 			};
@@ -1344,7 +1383,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = FMDB;
 				PUBLIC_HEADERS_FOLDER_PATH = include/FMDB;
 				ZERO_LINK = NO;
