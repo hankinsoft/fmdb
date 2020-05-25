@@ -854,6 +854,7 @@
 				INSTALL_PATH = "$(HOME)/bin";
 				LIBRARY_SEARCH_PATHS = "$(LIBRARY_SEARCH_PATHS)";
 				PRODUCT_NAME = fmdb;
+				SQLITE_ENABLE_RTREE = 1;
 			};
 			name = Debug;
 		};
@@ -875,6 +876,7 @@
 				INSTALL_PATH = "$(HOME)/bin";
 				LIBRARY_SEARCH_PATHS = "$(LIBRARY_SEARCH_PATHS)";
 				PRODUCT_NAME = fmdb;
+				SQLITE_ENABLE_RTREE = 1;
 			};
 			name = Release;
 		};
@@ -991,6 +993,7 @@
 				PRODUCT_NAME = FMDB;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SQLITE_ENABLE_RTREE = 1;
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1032,6 +1035,7 @@
 				PRODUCT_NAME = FMDB;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SQLITE_ENABLE_RTREE = 1;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1069,6 +1073,7 @@
 				PUBLIC_HEADERS_FOLDER_PATH = include/FMDB;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SQLITE_ENABLE_RTREE = 1;
 			};
 			name = Debug;
 		};
@@ -1097,6 +1102,7 @@
 				PUBLIC_HEADERS_FOLDER_PATH = include/FMDB;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SQLITE_ENABLE_RTREE = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1140,6 +1146,7 @@
 				PRODUCT_NAME = FMDB;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SQLITE_ENABLE_RTREE = 1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1181,6 +1188,7 @@
 				PRODUCT_NAME = FMDB;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SQLITE_ENABLE_RTREE = 1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1228,6 +1236,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.flyingmeat.FMDB-MacOS";
 				PRODUCT_NAME = FMDB;
 				SKIP_INSTALL = YES;
+				SQLITE_ENABLE_RTREE = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1269,6 +1278,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.flyingmeat.FMDB-MacOS";
 				PRODUCT_NAME = FMDB;
 				SKIP_INSTALL = YES;
+				SQLITE_ENABLE_RTREE = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1315,6 +1325,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "me.grahamdennis.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SQLITE_ENABLE_RTREE = 1;
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -1354,6 +1365,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "me.grahamdennis.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SQLITE_ENABLE_RTREE = 1;
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -1371,6 +1383,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = FMDB;
 				PUBLIC_HEADERS_FOLDER_PATH = include/FMDB;
+				SQLITE_ENABLE_RTREE = 1;
 			};
 			name = Debug;
 		};
@@ -1386,6 +1399,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				PRODUCT_NAME = FMDB;
 				PUBLIC_HEADERS_FOLDER_PATH = include/FMDB;
+				SQLITE_ENABLE_RTREE = 1;
 				ZERO_LINK = NO;
 			};
 			name = Release;
