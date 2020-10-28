@@ -37,12 +37,29 @@ int loadOrSaveDb(sqlite3 *pInMemory, const char *zFilename, int isSave)
          ** connection pTo. If no error occurred, then the error code belonging
          ** to pTo is set to SQLITE_OK.
          */
-        pBackup = sqlite3_backup_init(pTo, "main", pFrom, "main");
+        /* Open the sqlite3_backup object used to accomplish the transfer */
+        pBackup = sqlite3_backup_init(pFile, "main", pDb, "main");
         if( pBackup ){
-            (void)sqlite3_backup_step(pBackup, -1);
-            (void)sqlite3_backup_finish(pBackup);
+
+          /* Each iteration of this loop copies 5 database pages from database
+          ** pDb to the backup database. If the return value of backup_step()
+          ** indicates that there are still further pages to copy, sleep for
+          ** 250 ms before repeating. */
+          do {
+            rc = sqlite3_backup_step(pBackup, 5);
+            xProgress(
+                sqlite3_backup_remaining(pBackup),
+                sqlite3_backup_pagecount(pBackup)
+            );
+            if( rc==SQLITE_OK || rc==SQLITE_BUSY || rc==SQLITE_LOCKED ){
+              sqlite3_sleep(250);
+            }
+          } while( rc==SQLITE_OK || rc==SQLITE_BUSY || rc==SQLITE_LOCKED );
+
+          /* Release resources allocated by backup_init(). */
+          (void)sqlite3_backup_finish(pBackup);
         }
-        rc = sqlite3_errcode(pTo);
+        rc = sqlite3_errcode(pFile);
     }
     
     /* Close the database connection opened on database file zFilename
@@ -77,13 +94,6 @@ int loadOrSaveDb(sqlite3 *pInMemory, const char *zFilename, int isSave)
 
 - (BOOL)writeToFile:(NSString *)filePath
 {
-    // only attempt to save an on-disk representation for an in-memory database
-    if ( [self databasePath] != nil )
-    {
-        NSLog(@"Database is not an in-memory representation." );
-        return NO;
-    }
-    
     // and only if the database is open
     if ( [self sqliteHandle] == nil )
     {
