@@ -38,7 +38,7 @@ int loadOrSaveDb(sqlite3 *pInMemory, const char *zFilename, int isSave)
          ** to pTo is set to SQLITE_OK.
          */
         /* Open the sqlite3_backup object used to accomplish the transfer */
-        pBackup = sqlite3_backup_init(pFile, "main", pDb, "main");
+        pBackup = sqlite3_backup_init(pTo, "main", pFrom, "main");
         if( pBackup ){
 
           /* Each iteration of this loop copies 5 database pages from database
@@ -47,10 +47,12 @@ int loadOrSaveDb(sqlite3 *pInMemory, const char *zFilename, int isSave)
           ** 250 ms before repeating. */
           do {
             rc = sqlite3_backup_step(pBackup, 5);
+/*
             xProgress(
                 sqlite3_backup_remaining(pBackup),
                 sqlite3_backup_pagecount(pBackup)
             );
+*/
             if( rc==SQLITE_OK || rc==SQLITE_BUSY || rc==SQLITE_LOCKED ){
               sqlite3_sleep(250);
             }
