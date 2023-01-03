@@ -306,6 +306,8 @@ typedef NS_ENUM(int, FMDBCheckpointMode) {
           clientData: (void* _Nullable) pClientData
              destroy: (void* _Nullable) xDestroy;
 
+- (void) enableLoadExtensions;
+
 /** Test to see if we have a good connection to the database.
  
  This will confirm whether:

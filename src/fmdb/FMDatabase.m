@@ -274,6 +274,11 @@ NS_ASSUME_NONNULL_END
     return sqlite3_create_module( _db, moduleName.UTF8String, module, NULL );
 } // End of createModule:
 
+- (void) enableLoadExtensions
+{
+    sqlite3_enable_load_extension(_db, 1);
+} // End of enableLoadExtensions
+
 #pragma mark Busy handler routines
 
 // NOTE: appledoc seems to choke on this function for some reason;
