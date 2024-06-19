@@ -267,11 +267,11 @@ NS_ASSUME_NONNULL_END
 }
 
 - (int) createModule: (NSString*) moduleName
-              module: (void*) module
+           theModule: (void*) theModule
           clientData: (void*) pClientData
              destroy: (void*) xDestroy
 {
-    return sqlite3_create_module( _db, moduleName.UTF8String, module, NULL );
+    return sqlite3_create_module( _db, moduleName.UTF8String, theModule, NULL );
 } // End of createModule:
 
 - (void) enableLoadExtensions

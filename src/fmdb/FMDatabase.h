@@ -302,7 +302,7 @@ typedef NS_ENUM(int, FMDBCheckpointMode) {
 - (BOOL)close;
 
 - (int) createModule: (NSString*) moduleName
-              module: (void*) module
+           theModule: (void*) theModule
           clientData: (void* _Nullable) pClientData
              destroy: (void* _Nullable) xDestroy;
 
