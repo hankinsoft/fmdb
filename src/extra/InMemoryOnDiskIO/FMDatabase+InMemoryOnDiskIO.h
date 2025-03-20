@@ -14,7 +14,7 @@
 //
 //  http://www.sqlite.org/backup.html
 
-#import "FMDatabase.h"
+#import <FMDB/FMDatabase.h>
 
 @interface FMDatabase (InMemoryOnDiskIO)
 
